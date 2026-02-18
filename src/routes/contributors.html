@@ -1,0 +1,161 @@
+<main>
+    <div class="front">
+        <div class="contentWrapper">
+            <div class="textContainer">
+                <span class="bigText anim1">Meet</span>
+                <span class="bigText anim2">The</span>
+                <span class="bigText bold anim3">Team!</span>
+            </div>
+            <img src="/icons/PT.svg" class="logoAnim" alt="Pinpoint Tools Logo">
+        </div>
+    </div>
+
+    <div class="box">
+        <section href="#1" class="">
+            <div class="sectionText">
+                <section class="left">
+                    <h1> Daveberry Cricket Blueson </h1>
+                    <p> <b>The founder of this group/team</b>. Loves making software and tools for free and open source. Always dreamt on making a successful group/team. </p>
+                    <p> <a href="https://codedave.pages.dev"> Link to their website </a> </p>
+                </section>
+
+                <section class="right">
+                    <img class="preview" src="/avatar/Daveberry Cricket Blueson.png" width="256" height="256" alt="Daveberry Cricket Blueson">
+                </section>
+            </div>
+        </section>
+    </div>  
+</main>
+
+<style>
+    main {
+        background-image: url("/background/Daniel Leone - Unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 1;
+    }
+
+    .sectionText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+
+        .left {
+           text-align: left;
+        } .right {
+            text-align: right;
+        }
+    
+        .right, .left {
+           width: 100%;
+           max-width: 750px;
+        }
+    }
+
+    .bigText {
+        font-size: 50px;
+        display: inline-block;
+    } .bigText.bold {
+        font-weight: bold;
+
+    }
+
+    .front {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .box {
+        background-color: var(--boxFrame);
+        box-shadow: 0 0 10px 15px var(--boxFrame);
+        color: var(--text2Color);
+        width: 100%;
+    }
+
+    .contentWrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .textContainer {
+        display: flex;
+        gap: 15px;
+        animation: textRise 0.8s ease-in-out 1.2s forwards;
+    }
+
+    section.secondary {
+        background-color: var(--secondaryColor);
+        color: var(--textColor);
+        box-shadow: 0 0 10px 15px var(--secondaryColor);
+    }
+
+    @media screen and (max-width: 784px) {
+        .textContainer {
+            display: inline-block;
+            text-align: center;
+            word-spacing: 15px;
+        }
+
+        .box {
+            transform: translateY(40px);
+        }
+
+        .sectionText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+
+            .left, .right {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .preview {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .logoAnim {
+        width: 180px;
+        height: 180px;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        margin-top: 40px;
+        transform: translateY(50px);
+        animation: logoRise 0.8s ease-out 1.2s forwards;
+    } @keyframes slideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    } @keyframes textRise {
+        to {
+            transform: translateY(-110px);
+        }
+    } @keyframes logoRise {
+        to {
+            opacity: 1;
+            transform: translateY(-110px);
+        }
+    } .anim1, .anim2, .anim3 {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideUp 0.6s ease-out forwards;
+    }
+
+    .anim1 { animation-delay: 0.2s; }
+    .anim2 { animation-delay: 0.4s; }
+    .anim3 { animation-delay: 0.6s; }
+
+</style>

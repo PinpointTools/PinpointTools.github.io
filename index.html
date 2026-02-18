@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/icons/PT.svg" />
+        <link rel="stylesheet" href="src/styler.css"/>
+        <title>Pinpoint Tools</title>
+    </head>
+    <body>
+        <header>
+            <p style="font-size: 25px;">
+                <!-- <img src="/icons/PT.svg" width=25 height=25 alt="Pinpoint Tools Logo"> -->
+                Pinpoint Tools
+            </p>
+            <nav id="mainNavi"></nav>
+        </header>
+        
+        <main id="content">
+            <!-- Page content will be loaded here -->
+        </main>
+
+        <footer>
+            <a href="https://github.com/PinpointUtils">Github</a>
+            <a href="https://discord.gg/VQBDWSSnRA">Discord</a>
+
+            <p>
+                (c) 2026 - Pinpoint Utils Team <br/>
+                MIT License
+            </p>
+        </footer>
+
+        <script src="src/router.js" type="module"></script>
+    </body>
+
+    <style>
+        #content {
+            transform: translateY(-80px);
+            width: 100%;
+        }
+
+        header {
+            background-color: var(--elementColor);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            position: sticky;
+            top: 0;
+
+            box-shadow: 0 0 10px 15px var(--elementColor);
+            z-index: 1;
+            /* backdrop-filter: blur(10px); */
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            background-color: var(--secondaryColor);
+            color: var(--textColor);
+            box-shadow: 0 0 10px 15px var(--secondaryColor);
+            
+            padding-left: 30px;
+            padding-right: 30px;
+
+            a {
+                color: aqua;
+                text-decoration: none;
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+
+            a {
+                color: var(--textColor);
+                text-decoration: none;
+
+                background-color: var(--element2Color);
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+
+        /* most laziest way to fix it */
+        @media screen and (max-width: 784px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+            }
+
+            #content {
+                transform: translateY(-175px);
+            }
+        }
+    </style>
+</html>
