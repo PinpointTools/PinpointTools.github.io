@@ -18,13 +18,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repo uwu
+      - name: Checkout your repo
         uses: actions/checkout@v4
 
-      - name: Install pnpm first :3 
+      - name: Install pnpm first
         uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js (with pnpm caching)
+        uses: actions/setup-node@v4
         with:
-          version: 10
+          node-version: 24
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
