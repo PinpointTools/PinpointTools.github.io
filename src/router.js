@@ -4,11 +4,19 @@ const navDiv = document.getElementById('mainNavi');
 async function loadContent(pageName) {
     const page = pageName || 'main';
     try {
-        const response = await fetch(`/src/routes/${page}.html`);
-        if (!response.ok) {
-            throw new Error(`Page not found: ${page}`);
+        let response = await fetch(`/src/routes/${page}.html`);
+        let html = await response.text();
+        const isFullHtml = html.trim().toLowerCase().startsWith('<!doctype') || html.includes('<html');
+
+        if (!response.ok || isFullHtml) {
+            console.warn(`Page not found or invalid fragment: ${page}. Loading 404 page...`);
+            response = await fetch(`/src/routes/404.html`);
+            if (!response.ok) {
+                throw new Error(`404 page missing`);
+            }
+            html = await response.text();
         }
-        const html = await response.text();
+        
         contentDiv.innerHTML = html;
     } catch (error) {
         console.error('Error loading page:', error);

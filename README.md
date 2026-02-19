@@ -1,6 +1,6 @@
 <div align="center">
     <img src="assets/icons/PT.svg" width=150 height=150 alt="Pinpoint Tools Logo"/>
-    <h1>Pinpoint Website</h1>
+    <h1><a href="https://PinpointTools.github.io/">Pinpoint Website</a></h1>
     <p> The official website repository for the Pinpoint Website. </p>
 </div>
 

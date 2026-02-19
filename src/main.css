@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@125,300..700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+} html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Light Mode */
+:root {
+    --backgroundColor: #FFFFFF;
+    --boxFrame: #FFFFFF;
+    --textColor: #FFFFFF;
+    --text2Color: #000000;
+
+    --frameColor: #0000001f;
+    --frameInFrame: #00000046;
+    --elementColor: #ffffff1f;
+    --element2Color: #ffffff36;
+
+    --secondaryColor: #c9c9c9;
+    --footer: #000000;
+}
+
+/* Dark Mode */
+/* :root {
+    --backgroundColor: #FFFFFF;
+    --boxFrame: #000000;
+    --textColor: #FFFFFF;
+    --text2Color: #ffffff;
+
+    --frameColor: #0000001f;
+    --elementColor: #ffffff1f;
+    --element2Color: #ffffff36;
+} */
+
+body {
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 120%;
+    min-height: 100vh;
+
+    scroll-behavior: smooth;
+}
+
+a {
+    color: blue
+}

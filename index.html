@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="/icons/PT.svg" />
+        <link rel="stylesheet" href="src/main.css"/>
         <link rel="stylesheet" href="src/styler.css"/>
         <title>Pinpoint Tools</title>
     </head>
@@ -21,11 +22,11 @@
         </main>
 
         <footer>
-            <a href="https://github.com/PinpointUtils">Github</a>
+            <a href="https://github.com/PinpointTools">Github</a>
             <a href="https://discord.gg/VQBDWSSnRA">Discord</a>
 
             <p>
-                (c) 2026 - Pinpoint Utils Team <br/>
+                (c) 2026 - Pinpoint Tools Team <br />
                 MIT License
             </p>
         </footer>
@@ -35,26 +36,27 @@
 
     <style>
         #content {
-            transform: translateY(-80px);
+            /* transform: translateY(-80px); */
             width: 100%;
+            /* margin-top: -80; */
         }
 
         header {
-            background-color: var(--elementColor);
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            
+            z-index: 1000; 
+            
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+            backdrop-filter: blur(10px);
 
+            background-color: var(--elementColor);
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            padding-left: 10px;
-            padding-right: 10px;
-            
-            position: sticky;
-            top: 0;
-
-            box-shadow: 0 0 10px 15px var(--elementColor);
-            z-index: 1;
-            /* backdrop-filter: blur(10px); */
+            padding: 10px 10px; 
         }
 
         footer {
@@ -62,15 +64,15 @@
             flex-direction: column;
             gap: 10px;
 
-            background-color: var(--secondaryColor);
-            color: var(--textColor);
-            box-shadow: 0 0 10px 15px var(--secondaryColor);
-            
+            background-color: var(--secondary);
+            color: var(--text2Color);
+
             padding-left: 30px;
             padding-right: 30px;
+            padding-top: 30px;
 
             a {
-                color: aqua;
+                color: blue;
                 text-decoration: none;
             }
         }
@@ -80,25 +82,28 @@
             gap: 5px;
 
             a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
                 color: var(--textColor);
                 text-decoration: none;
 
                 background-color: var(--element2Color);
                 padding: 10px;
                 border-radius: 10px;
+
+                transition: padding 100ms ease-out;
+            } a:hover {
+                padding: 0 30px;
             }
         }
 
-        /* most laziest way to fix it */
         @media screen and (max-width: 784px) {
             header {
                 flex-direction: column;
                 gap: 10px;
                 padding: 15px;
-            }
-
-            #content {
-                transform: translateY(-175px);
             }
         }
     </style>

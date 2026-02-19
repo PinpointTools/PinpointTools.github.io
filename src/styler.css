@@ -1,56 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@125,300..700&display=swap');
-
-*, *::before, *::after {
-    box-sizing: border-box;
-} html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-} html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
+main {
+    background-image: url("/background/Daniel Leone - Unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 
-/* Light Mode */
-:root {
-    --backgroundColor: #FFFFFF;
-    --boxFrame: #FFFFFF;
-    --textColor: #FFFFFF;
-    --text2Color: #000000;
+.sectionText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
 
-    --frameColor: #0000001f;
-    --frameInFrame: #00000046;
-    --elementColor: #ffffff1f;
-    --element2Color: #ffffff36;
+    .left {
+        text-align: left;
+    }
 
-    --secondaryColor: #7e7e7e;
+    .right {
+        text-align: right;
+    }
+
+    .right,
+    .left {
+        width: 100%;
+        max-width: 750px;
+    }
 }
 
-/* Dark Mode */
-/* :root {
-    --backgroundColor: #FFFFFF;
-    --boxFrame: #000000;
-    --textColor: #FFFFFF;
-    --text2Color: #ffffff;
+.bigText {
+    font-size: 50px;
+    display: inline-block;
+}
 
-    --frameColor: #0000001f;
-    --elementColor: #ffffff1f;
-    --element2Color: #ffffff36;
-} */
+.bigText.bold {
+    font-weight: bold;
 
-body {
-    background-color: var(--secondaryColor);
-    color: var(--textColor);
+}
 
-    font-family: "Fredoka", sans-serif;
-    font-size: 120%;
+.front {
     height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-a {
-    color: blue
+.box {
+    background-color: var(--boxFrame);
+    /* box-shadow: 0 0 10px 15px var(--boxFrame); */
+    color: var(--text2Color);
+    width: 100%;
+}
+
+.contentWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContainer {
+    display: flex;
+    gap: 15px;
+}
+
+section.secondary {
+    background-color: var(--secondaryColor);
+    color: var(--text2Color);
+    /* box-shadow: 0 0 10px 15px var(--secondaryColor); */
+}
+
+@media screen and (max-width: 784px) {
+    .textContainer {
+        display: inline-block;
+        text-align: center;
+        word-spacing: 15px;
+    }
+
+    .box {
+        transform: translateY(40px);
+    }
+
+    .sectionText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        .left,
+        .right {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .preview {
+        width: auto;
+        height: auto;
+    }
 }

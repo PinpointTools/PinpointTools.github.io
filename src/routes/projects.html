@@ -55,68 +55,6 @@
 </main>
 
 <style>
-    main {
-        background-image: url("/background/Daniel Leone - Unsplash.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 1;
-    }
-
-    .sectionText {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px;
-
-        .left {
-           text-align: left;
-        } .right {
-            text-align: right;
-        }
-    
-        .right, .left {
-           width: 100%;
-           max-width: 750px;
-        }
-    }
-
-    .bigText {
-        font-size: 50px;
-        display: inline-block;
-    } .bigText.bold {
-        font-weight: bold;
-
-    }
-
-    .front {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-    
-    .box {
-        background-color: var(--boxFrame);
-        box-shadow: 0 0 10px 15px var(--boxFrame);
-        color: var(--text2Color);
-        width: 100%;
-    }
-
-    .contentWrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .textContainer {
-        display: flex;
-        gap: 15px;
-        animation: textRise 0.8s ease-in-out 1s forwards;
-    }
-
     img.preview {
         max-width: 100%;
         height: auto;
@@ -124,42 +62,11 @@
         box-shadow: 0 5px 10px 0 black;
     }
 
-    section.secondary {
-        background-color: var(--secondaryColor);
-        color: var(--textColor);
-        box-shadow: 0 0 10px 15px var(--secondaryColor);
-    }
-
-    @media screen and (max-width: 784px) {
-        .textContainer {
-            display: inline-block;
-            text-align: center;
-            word-spacing: 15px;
-        }
-
-        .box {
-            transform: translateY(40px);
-        }
-
-        .sectionText {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-
-            .left, .right {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        .preview {
-            width: auto;
-            height: auto;
-        }
-    }
-
-    .logoAnim {
+    .textContainer {
+        display: flex;
+        gap: 15px;
+        animation: textRise 0.8s ease-in-out 1s forwards;
+    } .logoAnim {
         width: 180px;
         height: 180px;
         opacity: 0;
@@ -190,5 +97,4 @@
 
     .anim1 { animation-delay: 0.2s; }
     .anim2 { animation-delay: 0.4s; }
-
 </style>
